@@ -10,7 +10,7 @@
 7. [FAQ] (README.md#faq)
 
 ##Bonus Feature
-Run bonus.sh to see the bonus feature in action! When streaming payments, new users can be added to the friends network, but only if they send a payment to someone already in the friends network. Instead of "trusted" or "unverified", these transactions are labelled "new sender". Being a new receiver doesn't add you to the network, because you haven't put any money at risk.
+Run bonus.sh to see the bonus feature in action! When streaming payments, new users can be added to the friends network, but only when sending a payment to a user already in the friends network. Instead of "trusted" or "unverified", these transactions are labelled "new sender". Being a new receiver doesn't add a user to the network, because they haven't put any money into the system.
 
 ##Challenge Summary
 
