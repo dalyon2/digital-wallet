@@ -1,5 +1,6 @@
 # Table of Contents
 
+0. [Bonus Feature] (README.md#bonus-feature)
 1. [Challenge Summary] (README.md#challenge-summary)
 2. [Details of Implementation] (README.md#details-of-implementation)
 3. [Description of Data] (README.md#description-of-data)
@@ -7,6 +8,9 @@
 5. [Repo directory structure] (README.md#repo-directory-structure)
 6. [Testing your directory structure and output format] (README.md#testing-your-directory-structure-and-output-format)
 7. [FAQ] (README.md#faq)
+
+##Bonus Feature
+Run bonus.sh to see the bonus feature in action! When streaming payments, new users can be added to the friends network, but only if they send a payment to someone already in the friends network. Instead of "trusted" or "unverified", these transactions are labelled "new sender". Being a new receiver doesn't add you to the network, because you haven't put any money at risk.
 
 ##Challenge Summary
 
