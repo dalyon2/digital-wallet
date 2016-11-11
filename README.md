@@ -1,3 +1,5 @@
+Please use python 3.5.2
+
 # Table of Contents
 
 0. [Bonus Feature] (README.md#bonus-feature)
