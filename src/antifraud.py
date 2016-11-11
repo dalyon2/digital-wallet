@@ -1,10 +1,9 @@
 #Written in 2016 by David Lyon
 #for the Insight Data Engineering coding challenge
-import codecs,sys,timeit,datetime
+import codecs,sys,datetime
 
 friends1={}
 friends2={}
-friends4={}
 headers=[]
 
 #Make a dictionary of all users containing the set of everyone either sending to or receiving from that user
@@ -263,21 +262,27 @@ def bonus(streamfile,outfile4):
     print("Output 4 trusted: %d untrusted: %d new: %d" % (t4,u4,n4))
     
 def main():
-#    args = sys.argv[1:]
-#    if len(args) != 5:
-#        print 'usage: payfile streamfile output1 output2 output3'
-#        sys.exit(1)
-#    network1(args[0],args[1],args[2])
-    start=timeit.default_timer()
-    trainnetwork1('../paymo_input/batch_payment.csv')
+    args = sys.argv[1:]
+    if len(args) < 5:
+        print ('usage: payfile streamfile output1 output2 output3')
+        sys.exit(1)
+    payfile=args[0]
+    streamfile=args[1]
+    outfile1=args[2]
+    outfile2=args[3]
+    outfile3=args[4]
+
+#    start=timeit.default_timer()
+    trainnetwork1(payfile)
 #    checkstream1('../paymo_input/stream_payment.csv','../paymo_output/output1.txt','../paymo_output/output2.txt','../paymo_output/output3.txt')
     trainnetwork2()
-    checkstream2('../paymo_input/stream_payment.csv','../paymo_output/output1.txt','../paymo_output/output2.txt','../paymo_output/output3.txt')
-    bonus('../paymo_input/stream_payment.csv','../paymo_output/output4.txt')
-    stop=timeit.default_timer()
-    print (stop-start)
-    
+    checkstream2(streamfile,outfile1,outfile2,outfile3)
+    if len(args)==6:        
+        bonus(streamfile,outfile4)
+#    stop=timeit.default_timer()
+#    print (stop-start)    
 
 
 if __name__ == '__main__':
   main()
+
