@@ -278,7 +278,7 @@ def main():
     trainnetwork2()
     checkstream2(streamfile,outfile1,outfile2,outfile3)
     if len(args)==6:        
-        bonus(streamfile,outfile4)
+        bonus(streamfile,args[5])
 #    stop=timeit.default_timer()
 #    print (stop-start)    
 
